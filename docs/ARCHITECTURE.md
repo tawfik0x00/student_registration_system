@@ -171,3 +171,6 @@ an enrollment that was not saved.
 - Business rules are in plain Java classes with JUnit tests, which supports
   individual questions such as “show me where duplicate enrollment is prevented”.
 - No generated code or hidden framework behaviour: students can explain every line.
+
+## Test 
+Yasmin Device
