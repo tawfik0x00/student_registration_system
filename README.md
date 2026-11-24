@@ -239,14 +239,13 @@ identities and contribution evidence in
 
 ## Contributing
 
-1. Read [`docs/DEVELOPMENT_GUIDE.md`](docs/DEVELOPMENT_GUIDE.md).
-2. Create a branch: `git switch -c feature/short-name`.
-3. Keep business rules in `service` or `model`, never in controllers.
-4. Add or update JUnit tests and run `mvn clean test`.
-5. Update the affected documentation and `TEAM_CONTRIBUTION.md`.
-6. Commit with a meaningful message, for example
-   `feat: prevent enrollment in full courses`.
-7. Merge into `main` after the suite passes.
+Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the branch and pull request workflow.
+All changes should be made on a new branch from `develop` and submitted as a pull
+request into `develop`. Do not commit directly to `main` or `develop`.
+
+The repository includes GitHub issue forms, a pull request template and a Maven CI
+workflow. See [`docs/DEVELOPMENT_GUIDE.md`](docs/DEVELOPMENT_GUIDE.md) for coding
+conventions and project structure.
 
 The repository has **no remote configured**; the group decides whether to add one.
 

@@ -8,6 +8,9 @@ project uses semantic versioning for its Maven artefact.
 
 ### Added
 
+- Added contributor guidance for the `main` / `develop` branch workflow, GitHub
+  issue forms for bugs, features and documentation, a pull request template, and a
+  Maven CI workflow for pull requests and shared branch pushes.
 - The official brief (`reference/CS113_Project_Instructions.pdf`) is now the primary
   requirements source; `docs/REQUIREMENTS.md` matches its CLO marks (5/3/2/5) and
   rubric.
