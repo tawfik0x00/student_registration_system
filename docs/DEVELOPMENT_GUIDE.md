@@ -88,22 +88,31 @@ GUI and future clients, it belongs in a service or in the model.
 
 ## 6. Git workflow
 
-For a small group, keep the process light but disciplined:
+`main` is the stable branch; `develop` is the integration branch. Create a new
+focused branch from `develop` for every feature, bug fix, documentation change or
+maintenance task. Open pull requests into `develop`; only maintainers promote
+reviewed work from `develop` to `main`. Do not commit directly to either shared
+branch.
 
 ```bash
+git switch develop
+git pull origin develop
 git switch -c feature/student-search
-# implement, test
+# implement and verify
+mvn clean verify
 git add src docs
 git commit -m "feat: add student search by major"
-git switch main
-git merge --no-ff feature/student-search
+git push -u origin feature/student-search
+# Open a pull request from feature/student-search to develop.
 ```
 
-- One topic per branch and per commit; do not mix formatting with behaviour.
+- Branch prefixes: `feature/`, `fix/`, `docs/`, `chore/`.
+- Keep each branch and pull request focused on one topic.
 - Commit messages: `feat:`, `fix:`, `test:`, `docs:`, `refactor:`, `chore:`.
-- Run `mvn clean test` before committing to `main`.
+- Run `mvn clean verify`; GUI changes also need a manual check in a desktop session.
 - Never commit `target/`, IDE files or `data/*.csv`.
 - Update [`TEAM_CONTRIBUTION.md`](TEAM_CONTRIBUTION.md) with what you actually did.
+- See [`CONTRIBUTING.md`](../CONTRIBUTING.md) for the full review workflow.
 
 ## 7. Definition of done
 
